@@ -1,102 +1,108 @@
 <html>
-    <head>
-	    <title>formulario</title>
-	</head>
-	<body> 
-	
-	<!--
-1. * color red
-2. los campos * son abligatorios
-3. los campos nombre y apellidos solo deben aceptar letras
-4. el campo cedula es solo numeros
-5. tipo ident:
-   ti
-   cc
-   ce
-   rc
-   ps
-6. genero:
-   masculino 
-   femenino
-   otro
-7. dept: listar almenos 10 departamentos
-8. mun: listar al menos 10 munisipios   
-	-->
-	<table border="0"align="center">
-
+<head>	
+<title>sign up</title>	
+</head>
+<body>
+<form name="form1" method="post">
+<table border="0" align="center">
+<tr>
+<td><br></td>	
+</tr>
+<th	colspan="2" align="center">Formulario de registro</th>
+<tr>
+<td><br></td></tr>
+<tr><td>Nombre: <font color="red">*</font></td>
+<td align="right"><input type="text" name="nombres" required pattern="[a-zA-Z]+" title="Solo letras mayusculas y minusculas"></td>
+</tr>		
+<tr>		
+<td>Apellido: <font color="red">*</font></td>
+<td align="right"><input type="text" name="apellidos" pattern="[a-zA-Z]+" title="Solo letras mayusculas y minusculas" required></td>
 </tr>
 <tr>
-<td colspan="3"><center><h3><b>Formulario de registro</b></h3><br></td>
-</tr>
-
-<form name="frm1" action="menu.html" method="post">
+<td >Tipo de identificación: <font color="red">*</font></td>
+<td align="right"><select required name="tid" style="width:173px" >
+<option value="">Tipo de identificación </option>
+<option value="TI">TI</option>
+<option value="CC">CC</option>
+<option value="CE">CE</option>
+<option value="RC">RC</option>
+<option value="PS">PS</option>				
+</select></td>
+</tr>		
+<td>Nro. Identificación: <font color="red">*</font></td>
+<td align="right"><input type="text" required name="numid" pattern="[0-9]+" title="Solo numeros"></td>
 <tr>
-<td align="left"><b>Nombres:*</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Genero: <font color="red">*</font></td>
+<td align="right"><select required name="gen" style="width:173px">
+<option value="">Género</option>
+<option value="f">Femenino</option>
+<option value="m">Masculino</option>
+<option value="o">Otro</option>
+</select></td>
 </tr>
 <tr>
-<td align="left"><b>Apellidos:*</b></td>
-<td colspan="3"><center><input type="text" name="contra" placeholder="ingresar contraseña" required><br></td>
+<td>Telefono:</td>
+<td align="right"><input type="text" name="telef"></td>
 </tr>
-
+<tr>	
+<td>Celular: <font color="red">*</font></td>
+<td align="right"><input type="text" name="celu" required></td>
+</tr>
 <tr>
-<td align="left"><b>Tipo identificacion* :</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Departamento nac: <font color="red">*</font></td>
+<td align="right"><select required name="dep" style="width:173px">
+<option value="">Departamento</option>
+<option value="cauca">cauca</option>
+<option value="cundinamarca">cundinamarca</option>
+<option value="nariño">nariño</option>
+<option value="putumayo">putumayo</option>
+<option value="valle del cauca">valle del cauca</option>
+<option value="quindio">quindio</option>
+<option value="santander">santander</option>
+<option value="vichada">vichada</option>
+<option value="risaralda">risaralda</option>
+<option value="meta">meta</option>
+</select></td>
 </tr>
-
 <tr>
-<td align="left"><b>Nro identificacion*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Ciudad nacimiento: <font color="red">*</font></td>
+<td align="right"><select required name="ciudad" style="width:173px">
+<option value="">Ciudad</option>
+<option value="arauca">Arauca</option>
+<option value="popayan">Popayan</option>
+<option value="bogota">Bogota</option>
+<option value="riohacha">Riohacha</option>
+<option value="medellin">Medellín</option>
+<option value="mocoa">Mocoa</option>
+<option value="pasto">Pasto</option>
+<option value="cali">Cali</option>
+<option value="monteria">Monteria</option>
+<option value="yopal">Yopal</option>				
+</select></td>
 </tr>
-
 <tr>
-<td align="left"><b>genero*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Correo electronico: <font color="red">*</font></td>
+<td align="right"><input type="email" name="cor" required></td>
 </tr>
-
 <tr>
-<td align="left"><b>telefono:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
-</tr>
-
+<td>Contraseña: <font color="red">*</font></td>
+<td align="right"><input type="password" name="contra" required></td>
+</tr>		
 <tr>
-<td align="left"><b>celular*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Confirmar contraseña: <font color="red">*</font></td>
+<td align="right"><input type="password" name="concontra" required></td>
 </tr>
-
 <tr>
-<td align="left"><b>Departamento nac*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td>Foto:</td>
+<td align="right"><input type="file" name="foto" accept="image/jpeg,image/png" ></td>
 </tr>
-
 <tr>
-<td align="left"><b>Ciudad nac*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td><br></td>
 </tr>
-
 <tr>
-<td align="left"><b>Correo electronico*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
+<td colspan="2" align="center"><input type="submit" value="Registrarse" align="center"></td>
 </tr>
-
-<tr>
-<td align="left"><b>Contraseña*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
-</tr>
-
-<tr>
-<td align="left"><b>Confirmar contraseña*:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
-</tr>
-
-<tr>
-<td align="left"><b>Foto:</b></td>
-<td colspan="3"><center><input type="text" name="user" placeholder="ingresar usuario" required></td>
-</tr>
-
-<tr>
-<td colspan="3"><center><b><input type="submit" value="Registrarse"></b><br><br>
-</tr>
-
-	</body>
-<html>
+</table>
+</form>
+</body>
+</html>
